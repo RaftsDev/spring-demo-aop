@@ -18,7 +18,7 @@ public class MainDemoApp {
 		
 		
 		Account myAccount = new Account();
-		theAccountDAO.addAccount(myAccount);
+		theAccountDAO.addAccount(myAccount, true);
 		
 		theMembershipDAO.addSillyMember();
 		
