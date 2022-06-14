@@ -15,6 +15,10 @@ public class MainDemoApp {
 		
 		theAccountDAO.addAccount();
 		
+		System.out.println("Call 2nd time:");
+		
+		theAccountDAO.addAccount();
+		
 		context.close();
 	}
 
