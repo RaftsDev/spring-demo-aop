@@ -3,6 +3,7 @@ package com.luv2code.aopdemo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.luv2code.aopdemo.dao.AccountDAO;
+import com.luv2code.aopdemo.dao.MembershipDAO;
 
 public class MainDemoApp {
 
@@ -13,11 +14,11 @@ public class MainDemoApp {
 		
 		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
-		theAccountDAO.addAccount();
-		
-		System.out.println("Call 2nd time:");
+		MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 		
 		theAccountDAO.addAccount();
+		
+		theMembershipDAO.addAccount();
 		
 		context.close();
 	}
